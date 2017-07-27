@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+LABEL maintainer="Kogias Marios"
+ENV JAVA_PKG=server-jre-8u*-linux-x64.tar.gz \
+    JAVA_HOME=/usr/java/default
+ADD $JAVA_PKG /usr/java/
+RUN export JAVA_DIR=$(ls -1 -d /usr/java/*) && \
+    ln -s $JAVA_DIR /usr/java/latest && \
+    ln -s $JAVA_DIR /usr/java/default && \
+    ln -s $JAVA_DIR/bin/java /usr/bin/java && \
+    ln -s $JAVA_DIR/bin/javac /usr/bin/javac && \
+    ln -s $JAVA_DIR/bin/jar /usr/bin/jar
