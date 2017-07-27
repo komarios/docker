@@ -12,7 +12,7 @@ ENV ORACLE_HOME=/u01/oracle \
     ADMIN_PORT="${ADMIN_PORT:-7001}" \
     ADMIN_USERNAME="${ADMIN_USERNAME:-weblogic}" \
     ADMIN_NAME="${ADMIN_NAME:-AdminServer}" \
-    ADMIN_PASSWORD="${ADMIN_PASSWORD:-"po09po09"}"
+    ADMIN_PASSWORD="${ADMIN_PASSWORD:-""}"
 
 # Setup filesystem and oracle user, copy file
 RUN mkdir -p /u01 && \
