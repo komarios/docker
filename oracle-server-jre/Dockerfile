@@ -1,7 +1,9 @@
 FROM ubuntu:latest
 LABEL maintainer="Kogias Marios"
+
 ENV JAVA_PKG=server-jre-8u*-linux-x64.tar.gz \
     JAVA_HOME=/usr/java/default
+
 RUN apt-get update && \
     apt-get install -yq wget && \
     mkdir -p /usr/java && \
